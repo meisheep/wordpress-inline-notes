@@ -1,0 +1,44 @@
+.inline-notes {
+  position: relative;
+  display: inline-block;
+}
+
+.inline-notes__content {
+  display: none;
+  width: 280px;
+  background-color: #ececec;
+  border-radius: 4px;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -140px;
+  padding: .5em;
+  font-size: 16px;
+}
+
+.inline-notes__content::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #ececec transparent transparent transparent;
+}
+
+.inline-notes__button {
+  background-color: #cccccc;
+  border-radius: 4px;
+  font-size: 20px;
+  margin: 4px;
+  padding: 0px 4px;
+  text-decoration: none;
+  cursor: help;
+}
+
+.inline-notes__button:hover + .inline-notes__content {
+  display: inline;
+}
